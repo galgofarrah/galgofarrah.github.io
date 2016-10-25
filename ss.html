@@ -1,0 +1,52 @@
+<body style="bposition: relative;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url('assets/1.jpg');
+    background-repeat:no-repeat;
+    background-size:100% 100vh;
+    background-attachment: fixed;
+    margin: auto;">
+
+
+<div id = "TableT" style="display:none;">
+      <center> <br><br><br><br><br>
+        <img src="assets/logo.png"style="width:204px;height:204px; margin = auto;"><br>
+
+  
+
+       
+
+        <span style="font-family: 'Oxygen', sans-serif; color:white; font-size: 250%;"id="countdown-holder"></span>
+
+        <br><br>
+
+        <span style="font-family: 'Roboto', sans-serif; color:#f39c12; font-size: 300%;">WE ARE COMING SOON</span><br><br>
+        <span style="font-family: 'Oxygen', sans-serif; color:white; font-size: 100%;">Innovating Communities through Augmented and Virtual Reality</span> <br><br>
+        <a href="https://web.facebook.com/profile.php?id=397037083677580"  target="_blank"><img src="assets/facebook-icon-4.png"style="width:18px;height:18px;"></a> <br><a href="index.html">Design 1</a><br><a href="index2.html">Design 2</a>
+
+        <br><br>
+
+      </center>
+    </div>
+
+  </body>
+
+  <script>
+  var clock = document.getElementById("countdown-holder")
+    , targetDate = new Date(2017, 01, 17); 
+ 
+  clock.innerHTML = countdown(targetDate).toString();
+</script>
+
+<script>
+  var clock = document.getElementById("countdown-holder")
+    , targetDate = new Date(2017, 01, 17); // Jan 1, 2050;
+ 
+  clock.innerHTML = countdown(targetDate).toString();
+  setInterval(function(){
+    clock.innerHTML = countdown(targetDate).toString();
+  }, 1000);
+</script>
+
+<script src="scripts/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){$('#TableT').fadeIn(1500);});
+  </script>
