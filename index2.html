@@ -7,28 +7,77 @@
       <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Oxygen:300" rel="stylesheet">
       <script src="scripts/countdown.js"></script>
+      <style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 54%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 10px solid #f39c12;;
+  border-radius: 50%;
+  border-top: 10px solid #1c4e7f;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
   </head>
 
-  <body style="bposition: relative;
+  <body onload="myFunction()" style="
+
+  bposition: relative;
     background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url('assets/1.jpg');
     background-repeat:no-repeat;
     background-size:100% 100vh;
     background-attachment: fixed;
     margin: auto;">
 
+<div id="loader"></div>
 
-<div id = "TableT" style="display:none;">
-      <center> <br><br><br><br><br>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+      <center > <br><br><br><br><br>
         <img src="assets/logo.png"style="width:204px;height:204px; margin = auto;"><br>
-
-  
-
-       
-
         <span style="font-family: 'Oxygen', sans-serif; color:white; font-size: 250%;"id="countdown-holder"></span>
-
         <br><br>
-
         <span style="font-family: 'Roboto', sans-serif; color:#f39c12; font-size: 300%;">WE ARE COMING SOON</span><br><br>
         <span style="font-family: 'Oxygen', sans-serif; color:white; font-size: 100%;">Innovating Communities through Augmented and Virtual Reality</span> <br><br>
         <a href="https://web.facebook.com/profile.php?id=397037083677580"  target="_blank"><img src="assets/facebook-icon-4.png"style="width:18px;height:18px;"></a> <br><a href="index.html">Design 1</a><br><a href="index2.html">Design 2</a>
@@ -36,18 +85,27 @@
         <br><br>
 
       </center>
-    </div>
 
-  </body>
+</div>
 
-  <script>
+<script src="scripts/jquery.min.js"></script>
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
   var clock = document.getElementById("countdown-holder")
     , targetDate = new Date(2017, 01, 17); 
  
   clock.innerHTML = countdown(targetDate).toString();
-</script>
 
-<script>
   var clock = document.getElementById("countdown-holder")
     , targetDate = new Date(2017, 01, 17); // Jan 1, 2050;
  
@@ -55,11 +113,10 @@
   setInterval(function(){
     clock.innerHTML = countdown(targetDate).toString();
   }, 1000);
-</script>
 
-<script src="scripts/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){$('#TableT').fadeIn(1500);});
+    
   </script>
+
+</body>
 
 </html
