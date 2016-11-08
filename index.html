@@ -3,10 +3,13 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>QITC 9</title>
+      <link rel="shortcut icon" type="image/x-icon" href="assets/singlelogo.png" />
       <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Oxygen:300" rel="stylesheet">
       <script src="scripts/countdown.js"></script>
+      <script src="scripts/countdown2.js"></script>
       <style>
 /* Center the loader */
 #loader {
@@ -65,7 +68,7 @@
   <body onload="myFunction()" style="
 
   bposition: relative;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url('assets/1.jpg');
+    background-image: url('assets/2.png');
     background-repeat:no-repeat;
     background-size:100% 100vh;
     background-attachment: fixed;
@@ -76,11 +79,11 @@
 <div style="display:none;" id="myDiv" class="animate-bottom">
       <center > <br><br><br><br><br>
         <img src="assets/logo.png"style="width:204px;height:204px; margin = auto;"><br>
-        <span style="font-family: 'Oxygen', sans-serif; color:white; font-size: 250%;"id="countdown-holder"></span>
+        <span style="font-family: 'Oxygen', sans-serif; color:#00366d; font-size: 250%;"id="countdown-holder"></span>
         <br><br>
         <span style="font-family: 'Roboto', sans-serif; color:#f39c12; font-size: 300%;">WE ARE COMING SOON</span><br><br>
-        <span style="font-family: 'Oxygen', sans-serif; color:white; font-size: 100%;">Innovating Communities through Augmented and Virtual Reality</span> <br><br>
-        <a href="https://web.facebook.com/profile.php?id=397037083677580"  target="_blank"><img src="assets/facebook-icon-4.png"style="width:18px;height:18px;"></a> <br>
+        <span style="font-family: 'Oxygen', sans-serif; color:#00366d; font-size: 100%;">Innovating Communities through Augmented and Virtual Reality</span> <br><br>
+        <a href="https://web.facebook.com/profile.php?id=397037083677580"  target="_blank"><img src="assets/facebook-icon-4.png"style="width:18px;height:18px;"></a> 
 
         <br><br>
 
@@ -102,12 +105,12 @@ function showPage() {
 }
 
   var clock = document.getElementById("countdown-holder")
-    , targetDate = new Date(2017, 01, 17); 
+    , targetDate = new Date(2017, 01, 3); 
  
   clock.innerHTML = countdown(targetDate).toString();
 
   var clock = document.getElementById("countdown-holder")
-    , targetDate = new Date(2017, 01, 17); // Jan 1, 2050;
+    , targetDate = new Date(2017, 01, 3); 
  
   clock.innerHTML = countdown(targetDate).toString();
   setInterval(function(){
